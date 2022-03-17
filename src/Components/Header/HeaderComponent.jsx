@@ -10,10 +10,12 @@ import {
   PopoverArrow,
   Stack,
   Avatar,
-  Button
+  Button,
+  Image
 } from '@chakra-ui/react';
+import img from 'Assets/flow.jpg'
 
-import { NavBar } from './NavBarComponent';
+// import { NavBar } from './NavBarComponent';
 
 export const Header = () => {
   const navigate = useNavigate();
@@ -34,12 +36,17 @@ export const Header = () => {
 
   return(
     <header>
+
       <Stack
       direction={{base: 'row', sm:'row'}}
       alignItems={'center'} 
       justifyContent={'space-between'}
       p={'5px 10px'}
       >
+               <Image
+        src={img}
+        alt='flow'
+        />
         <Popover>
           <PopoverTrigger>
             <Avatar
@@ -68,7 +75,7 @@ export const Header = () => {
             </PopoverBody>
           </PopoverContent>
         </Popover>
-        <NavBar/>
+        {/* <NavBar/> */}
       </Stack>
     </header>
 )};
