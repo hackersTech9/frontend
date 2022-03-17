@@ -8,8 +8,8 @@ export const Stripe = ({sectionTitle, billboard }) => {
   const navigate = useNavigate();
 
   const handleOnClick = (url) => {
-    // navigate('/play', { state: {contentSrc: url}});
-    console.log(url)
+    navigate('/play', { state: {contentSrc: url}});
+
   }
   
   return(
