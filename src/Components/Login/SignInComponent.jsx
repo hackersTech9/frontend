@@ -66,7 +66,7 @@ export default function SignIn({ checkInputs, changeFormMode, handleOnChange, da
         />
         :
         <>
-          <Button onClick={signIn}>Iniciar sesión</Button>
+          <Button variant='btnMain' onClick={signIn}>Iniciar sesión</Button>
           <Stack 
           direction='row'
           spacing='1'

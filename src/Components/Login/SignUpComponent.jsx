@@ -116,7 +116,7 @@ export default function SignUp({ checkInputs, changeFormMode, handleOnChange, da
         <Stack direction='row'>
           {registrationStep === 1 &&
           <>
-          <Button onClick={changeStep}>Paso siguiente</Button>
+          <Button variant='btnMain' onClick={changeStep}>Paso siguiente</Button>
           </>
           }
           {registrationStep === 2 &&
@@ -131,8 +131,8 @@ export default function SignUp({ checkInputs, changeFormMode, handleOnChange, da
             />
             : 
             <>
-              <Button onClick={changeStep}>Paso anterior</Button>
-              <Button onClick={signUp}>Registrar cuenta</Button>
+              <Button variant='btnMain' onClick={changeStep}>Paso anterior</Button>
+              <Button variant='btnMain' onClick={signUp}>Registrar cuenta</Button>
             </>
             }
           </>
