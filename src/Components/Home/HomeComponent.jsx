@@ -6,7 +6,6 @@ import {
   Stack
 } from '@chakra-ui/react';
 
-import prefTest from 'prefTest.json';
 import { Stripe } from 'Components/Stripe/';
 
 export const Home = () => {
@@ -17,13 +16,15 @@ export const Home = () => {
   const [dataToRender, setDataToRender] = useState(null);
 
   useEffect(() => {
-    const processedData = processData(prefTest)
-    setDataToRender(processedData)
+    const { preference } = userInfo;
+    const processedData = processData(preference);
+    setDataToRender(processedData);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
   
   const processData = (prefTest) => {
     const processedData = Object.keys(prefTest).map((key) => {return({sectionTitle: key, billboard: prefTest[key]})});
-    return processedData
+    return processedData;
   }
 
   return(
