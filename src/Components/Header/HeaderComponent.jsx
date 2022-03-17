@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { LoginContext } from 'Context/LoginContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { 
   Popover,
   PopoverTrigger,
@@ -29,7 +29,7 @@ export const Header = () => {
 
   const handleLogout = () => {
     logout();
-    navigate('/')
+    navigate('/');
   }
 
   return(
@@ -53,9 +53,18 @@ export const Header = () => {
             <PopoverArrow />
             <PopoverHeader>{`${userInfo?.lastname.toUpperCase()} ${userInfo?.firstname}`}</PopoverHeader>
             <PopoverBody>
-              <Button onClick={handleLogout}>
-                Cerrar sesión
-              </Button>
+              <Stack>
+                  <Button>
+                    <Link to='/edituser'>
+                        Editar usuario
+                    </Link>
+                  </Button>
+                <Button 
+                onClick={handleLogout}
+                >
+                  Cerrar sesión
+                </Button>
+              </Stack>
             </PopoverBody>
           </PopoverContent>
         </Popover>

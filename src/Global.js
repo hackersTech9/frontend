@@ -12,6 +12,7 @@ const BASE = (() => {
 let Global = {
   login: `${BASE}/login/`,
   signup: `${BASE}/signup/`,
+  changePassword: `${BASE}/users/password`,
 }
 
 export default Global;
