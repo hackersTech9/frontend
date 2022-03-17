@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { LoginContext } from 'Context/LoginContext';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Global from 'Global';
 import {
@@ -16,8 +18,10 @@ import {
 
 export default function SignUp({ checkInputs, changeFormMode, handleOnChange, dataToSend, hasError, resetInputs }) {
 
+  const Login = useContext(LoginContext);
+  const { saveDataFromLogin } = Login;
+  const navigate = useNavigate();
   const { name, lastName, email, password, password2, avatar } = dataToSend;
-
   const [registrationStep, setRegistrationStep] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -45,7 +49,10 @@ export default function SignUp({ checkInputs, changeFormMode, handleOnChange, da
           email,
           password
         };
-        await axios.post(Global.signup, dataForSignUp);
+        const response = await axios.post(Global.signup, dataForSignUp);
+        saveDataFromLogin(response.data)
+        setIsLoading(false);
+        navigate('/home');
         changeFormMode();
         setIsLoading(false);
       } catch (error) {
