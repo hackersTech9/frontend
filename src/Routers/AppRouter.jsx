@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import LoginPage from 'Pages/LoginPage';
 import MainPage from "Pages/MainPage";
-import { NotFound } from "Components/NotFound/NotFoundComponent";
+import NotFoundPage from "Pages/NotFoundPage";
 
 function AppRouter() {
   return(
@@ -10,7 +10,7 @@ function AppRouter() {
       <Routes>
         <Route path='/' element={<LoginPage />}/>
         <Route path='/home' element={<MainPage />}/>
-        <Route path='*' element={<NotFound />}/>
+        <Route path='*' element={<NotFoundPage />}/>
       </Routes>
     </BrowserRouter>
   )
