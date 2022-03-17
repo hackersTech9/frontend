@@ -1,7 +1,7 @@
 const BASE = (() => {
   switch (process.env.REACT_APP_ENV){
     case 'local':
-      return 'http://localhost:8000'
+      return 'http://localhost:8080'
     case 'development':
       return 'https://tshackathon.herokuapp.com'
     default:
