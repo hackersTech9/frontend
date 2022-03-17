@@ -9,7 +9,6 @@ export const Stripe = ({sectionTitle, billboard }) => {
 
   const handleOnClick = (url) => {
     navigate('/play', { state: {contentSrc: url}});
-
   }
   
   return(
