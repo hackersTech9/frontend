@@ -17,21 +17,26 @@ export const Home = () => {
   const [dataToRender, setDataToRender] = useState(null);
 
   useEffect(() => {
-    console.log(prefTest)
-    setDataToRender(prefTest)
+    const processedData = processData(prefTest)
+    setDataToRender(processedData)
   },[]);
-
+  
+  const processData = (prefTest) => {
+    const processedData = Object.keys(prefTest).map((key) => {return({sectionTitle: key, billboard: prefTest[key]})});
+    return processedData
+  }
 
   return(
-    <Container>
+    <Container
+    maxW='container.xxl'
+    >
       <Center>
-        <h2>Bienvenid@ {userInfo?.firstname}!!</h2>
+        <h2>Qué vas a ver {userInfo?.firstname}?</h2>
       </Center>
       <Stack
-      align='center'
       >
         {dataToRender ?
-          <Stripe />
+          dataToRender.map((v, i) => <Stripe key={i} sectionTitle={v.sectionTitle} billboard={v.billboard}/>)
           :
           <p>cargando..</p>
         }
