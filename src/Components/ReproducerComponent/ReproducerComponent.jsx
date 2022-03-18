@@ -49,7 +49,7 @@ export const Reproducer = () => {
       >
         {content &&
         <>
-          <Text>{content.contentTitle}</Text>
+          <Text variant="stripeTextPrimary">{content.contentTitle}</Text>
           <iframe
           width={'100%'}
           height={'400px'}

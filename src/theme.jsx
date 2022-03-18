@@ -40,6 +40,13 @@ export default extendTheme({
         }
       }
     },
+    Input: {
+      variants: {
+        logImput: {
+          bg: colorPalette.tecoGrey
+        },
+      }
+    },
     Text:{
       variants: {
         stripeTextPrimary: {
@@ -56,7 +63,7 @@ export default extendTheme({
           color: colorPalette.tecoBlack,
           fontSize: '14px',
           fontWeight:'bold',
-          bg:'tecoGreen'
+          bg:'tecoGreen',
         }
       }
     }
