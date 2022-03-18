@@ -1,8 +1,8 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
-import { LoginContext } from 'Context/LoginContext';
 import Global from 'Global';
+import { HELPER_FUNCTIONS } from 'Helper/helper';
 import {
   Stack,
   FormControl,
@@ -20,8 +20,6 @@ export const EditUser = () => {
 
   
   const navigate = useNavigate();
-  const Login = useContext(LoginContext);
-  const { userInfo } = Login;
 
   const { passwordCurrent, passwordNew } = dataToSend;
 
@@ -33,10 +31,11 @@ export const EditUser = () => {
   }
 
   const handleOnSubmit = async () => {
+    const bearer = HELPER_FUNCTIONS.getToken();
+    const config = { headers: { Authorization: bearer }}
     setIsLoading(true);
     try {
-      const response = await axios.put(Global.changePassword, dataToSend);
-      console.log(response);
+      await axios.put(Global.changePassword, dataToSend, config);
       navigate('/home');
       setIsLoading(false);
     } catch (error) {

@@ -48,7 +48,8 @@ export const Home = () => {
       // }
       setDataToRender(processedData);
     }
-  },[width, userInfo]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[width]);
   
   const processData = (prefTest) => {
     const processedData = Object.keys(prefTest).map((key) => {return({sectionTitle: key, billboard: prefTest[key]})});

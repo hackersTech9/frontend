@@ -6,8 +6,9 @@ const LoginContextProvider = ({ children }) => {
 
   const [userInfo, setUserInfo] = useState(null);
 
-  const saveDataFromLogin = (info) => {
-    setUserInfo(info)
+  const saveDataFromLogin = (info, token) => {
+    setUserInfo(info);
+    if(token) localStorage.setItem('tokenFlow', JSON.stringify(token));
   }
 
   const logout = () => {

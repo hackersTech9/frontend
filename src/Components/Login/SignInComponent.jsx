@@ -31,7 +31,7 @@ export default function SignIn({ checkInputs, changeFormMode, handleOnChange, da
     else {
       try {
         const response = await axios.post(Global.login, {email, password});
-        saveDataFromLogin(response.data)
+        saveDataFromLogin(response.data.data, response.data.token)
         setIsLoading(false);
         navigate('/home');
       } catch (error) {
