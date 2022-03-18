@@ -5,7 +5,6 @@ import { useNavigate } from '../../../node_modules/react-router-dom/index'
 
 export const Stripe = ({sectionTitle, billboard }) => {
 
-  console.log(billboard)
   const navigate = useNavigate();
 
   const handleOnClick = (url) => {

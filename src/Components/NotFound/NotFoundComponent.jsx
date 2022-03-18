@@ -25,7 +25,7 @@ export const NotFound = () => {
           Ups! Parece que estás perdid@
         </Text>
         <Link to='/home'>
-          <Button mt='15px'>Ir al inicio</Button>
+          <Button variant='btnMain' mt='15px'>Ir al inicio</Button>
         </Link>
       </Container>
 )};
