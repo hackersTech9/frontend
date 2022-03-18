@@ -50,15 +50,23 @@ To run this app:
 
 ### Login
 
+<img src='https://github.com/hackersTech9/frontend/blob/main/src/Assets/login-lite  .png' alt='portada'/>
+
 ### Change password
+
+<img src='https://github.com/hackersTech9/frontend/blob/main/src/Assets/flow.lite.png' alt='portada'/>
 
 ### Main page
 
+<img src='https://github.com/hackersTech9/frontend/blob/main/src/Assets/lite-main.png' alt='portada'/>
+
 ### User preferences
+
+<img src='https://github.com/hackersTech9/frontend/blob/main/src/Assets/lite-preferen.png' alt='portada'/>
 
 ### Video playback
 
-
+<img src='https://github.com/hackersTech9/frontend/blob/main/src/Assets/lite-play.png' alt='portada'/>
 
 ## Collaborators
 
