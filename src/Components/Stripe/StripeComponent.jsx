@@ -1,6 +1,6 @@
+import React from 'react';
 import { Stack, Text, Box } from '@chakra-ui/react'
 import { useNavigate } from '../../../node_modules/react-router-dom/index'
-
 
 
 
@@ -59,17 +59,19 @@ export const Stripe = ({sectionTitle, billboard }) => {
   return(
     <>
       {generateTitle(sectionTitle)}
-      <Stack justifyContent='space-evenly'  direction= {{base:"column", sm:"row"}}>
+      <Stack align='center' direction= {{base:"column", md:"row"}}>
         {billboard.map((v, i) => {  
           return(
+            
             <Box key={i}
-            w='auto'
-            h='auto'
+            // w='auto'
+            //h='auto'
+            m={'0 auto'}
             >
               <Stack
               justifyContent='end'
-              w={[100, 200]}
-              h={[200, 300]}
+              w={[200, 200]}
+              h={[300, 300]}
               m={2}
               onClick={() => { handleOnClick(v.url, v.name) }}
               bgGradient={`url(${v.thumbnail})`}
@@ -84,7 +86,8 @@ export const Stripe = ({sectionTitle, billboard }) => {
                   {v.name}
                 </Text>
               </Stack>
-            </Box>
+            </Box> 
+            
           )
         })
         }
