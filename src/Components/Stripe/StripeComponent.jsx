@@ -73,6 +73,9 @@ export const Stripe = ({sectionTitle, billboard }) => {
               w={[200, 200]}
               h={[300, 300]}
               m={2}
+              transition='all 0.3s ease-in-out'
+              cursor='pointer'
+              _hover={{transform: 'scale(1.05)', transition: 'all 0.2s ease-in-out'}}
               onClick={() => { handleOnClick(v.url, v.name) }}
               bgGradient={`url(${v.thumbnail})`}
               backgroundRepeat='no-repeat'
