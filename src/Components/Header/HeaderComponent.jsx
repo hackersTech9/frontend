@@ -43,9 +43,10 @@ export const Header = () => {
 
       <Stack
       direction={{base: 'row', sm:'row'}}
-      alignItems={'center'} 
       justifyContent={'space-between'}
-      p={'5px 10px'}
+      p={'10px 10px'}
+      m={'0 auto'}
+      w={'95%'}
       >
                <Image 
         onClick={handleHome}
@@ -59,7 +60,7 @@ export const Header = () => {
             src={userInfo?.avatar}
             />
           </PopoverTrigger>
-          <PopoverContent bg='tecoGrey900' border='none'
+          <PopoverContent bg='tecoGrey900' border='none' boxShadow='0px 0px 10px rgba(0,0,0,0.5)'
           w='250px' h='200px'
           >
             <PopoverArrow bg='tecoGreen'/>

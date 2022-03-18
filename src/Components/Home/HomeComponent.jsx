@@ -31,22 +31,22 @@ export const Home = () => {
     if(userInfo) {
       const { preference } = userInfo;
       let processedData = processData(preference);
-      if (width < 425) {
-        let mobileData = [];
-        processedData.forEach((preference)=> {
-          const { sectionTitle, billboard} = preference;
-          if(sectionTitle === 'live' || sectionTitle === 'music'){
-            mobileData = [...mobileData, preference]
-          } else {
-            const index = mobileData.findIndex(x => x.sectionTitle === "mobileContent");
-            if(index === -1) mobileData = [...mobileData, {sectionTitle: 'mobileContent', billboard}]
-            else mobileData[index].billboard = [...mobileData[index].billboard, ...billboard];
-          };
-        });
-        setDataToRender(mobileData);
-      } else {
-        setDataToRender(processedData);
-      }
+      // if (width < 425) {
+      //   let mobileData = [];
+      //   processedData.forEach((preference)=> {
+      //     const { sectionTitle, billboard} = preference;
+      //     if(sectionTitle === 'live' || sectionTitle === 'music'){
+      //       mobileData = [...mobileData, preference]
+      //     } else {
+      //       const index = mobileData.findIndex(x => x.sectionTitle === "mobileContent");
+      //       if(index === -1) mobileData = [...mobileData, {sectionTitle: 'mobileContent', billboard}]
+      //       else mobileData[index].billboard = [...mobileData[index].billboard, ...billboard];
+      //     };
+      //   });
+      //   setDataToRender(mobileData);
+      // } else {
+      // }
+      setDataToRender(processedData);
     }
   },[width, userInfo]);
   
@@ -57,11 +57,12 @@ export const Home = () => {
 
   return(
     <Container
-    maxW='container.xxl'
+    maxW='container.md'
+    centerContent
     >
       <Stack
       >
-        {dataToRender ?
+        { dataToRender ?
           dataToRender.map((v, i) => <Stripe key={i} sectionTitle={v.sectionTitle} billboard={v.billboard}/>)
           :
           <p>cargando..</p>

@@ -17,32 +17,34 @@ export const Stripe = ({sectionTitle, billboard }) => {
     switch (key) {
       case "live":
         return(
-          <Stack direction="row" align='baseline'>
+          <Stack justifyContent='center' direction="row" align='baseline'>
             <Text variant='stripeTextPrimary'>TV</Text>
             <Text variant='stripeTextSecondary'>en VIVO</Text>
           </Stack>
         )
       case "movies":
         return(
-          <Stack direction="row" align='baseline'>
+          <Stack justifyContent='center' direction="row" align='baseline'>
             <Text variant='stripeTextPrimary'>Películas</Text>
             <Text variant='stripeTextSecondary'>ON DEMAND</Text>
           </Stack>
         )  
       case "series":
         return(
-          <Stack direction="row" align='baseline'>
+          <Stack justifyContent='center' direction="row" align='baseline'>
             <Text variant='stripeTextPrimary'>Series</Text>
             <Text variant='stripeTextSecondary'>ON DEMAND</Text>
           </Stack>
         )
       case "music":
         return(
+          <Stack justifyContent='center' direction="row" align='baseline'>
         <Text variant='stripeTextPrimary'>Música</Text>
+        </Stack>
         )
         case "mobileContent":
         return(
-          <Stack direction="row" align='baseline'>
+          <Stack justifyContent='center' direction="row" align='baseline'>
             <Text>contenido</Text>
             <Text>ON DEMAND</Text>
           </Stack>
@@ -57,7 +59,7 @@ export const Stripe = ({sectionTitle, billboard }) => {
   return(
     <>
       {generateTitle(sectionTitle)}
-      <Stack  direction= "row">
+      <Stack justifyContent='space-evenly'  direction= {{base:"column", sm:"row"}}>
         {billboard.map((v, i) => {  
           return(
             <Box key={i}
@@ -66,8 +68,9 @@ export const Stripe = ({sectionTitle, billboard }) => {
             >
               <Stack
               justifyContent='end'
-              w='140px'
-              h='140px'
+              w={[100, 200]}
+              h={[200, 300]}
+              m={2}
               onClick={() => { handleOnClick(v.url, v.name) }}
               bgGradient={`url(${v.thumbnail})`}
               backgroundRepeat='no-repeat'
