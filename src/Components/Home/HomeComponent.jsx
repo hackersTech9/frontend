@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState, useLayoutEffect } from 'react';
 import { LoginContext } from 'Context/LoginContext';
 import {
-  Center,
   Container,
   Stack
 } from '@chakra-ui/react';

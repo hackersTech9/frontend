@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { LoginContext } from 'Context/LoginContext';
+import { ThemeContext } from 'Context/ThemeContext';
 import { useNavigate, Link } from 'react-router-dom';
 import { 
   Popover,
@@ -15,12 +16,12 @@ import {
 } from '@chakra-ui/react';
 import img from 'Assets/flow.jpg'
 
-// import { NavBar } from './NavBarComponent';
-
 export const Header = () => {
   const navigate = useNavigate();
   const Login = useContext(LoginContext);
   const { userInfo, saveDataFromLogin, logout } = Login;
+  const Theme = useContext(ThemeContext);
+  const { changeTheme } = Theme;
 
   useEffect(() => {
     const userInMemory = JSON.parse(localStorage.getItem('userInfo'));
@@ -66,6 +67,11 @@ export const Header = () => {
             <PopoverHeader textAlign={['center']} m={'3'} borderColor='tecoGrey900'>{`${userInfo?.lastname.toUpperCase()} ${userInfo?.firstname}`}</PopoverHeader>
             <PopoverBody>
               <Stack m={'1'}>
+                  <Button
+                  onClick={changeTheme}
+                  >
+                    Luna / Sol
+                  </Button>
                   <Button bg='tecoGreen' mb={'2'} color='tecoGrey900'>
                     <Link to='/edituser'>
                         Editar usuario
