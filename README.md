@@ -1,4 +1,4 @@
-# Hackathon of TechStation - Group 9
+# Hackathon of TechStation - Trasnocheros
 # Flow Lite
 
 _It is a flow project but lighter and faster.
