@@ -17,7 +17,7 @@ export default extendTheme({
   styles: {
     global: {
       body: {
-        bg: colorPalette.tecoGrey,
+        bg: "#DBE4F4",
         color: colorPalette.tecoBlack
       }
     }
@@ -31,24 +31,31 @@ export default extendTheme({
     Button: {
       variants: {
         btnMain: {
-          color: colorPalette.tecoBlack,
-          bg: colorPalette.tecoGreen,
-          cursor: 'pointer'
+          color: colorPalette.tecoGreen,
+          bg: colorPalette.tecoGrey900,
+          point: 'pointer'
         },
         fondo: {
-          bg: 'tecoGrey900'
+          bg: '#CBD5E0'
         }
+      }
+    },
+    Input: {
+      variants: {
+        logImput: {
+          bg: colorPalette.tecoGrey300
+        },
       }
     },
     Text:{
       variants: {
         stripeTextPrimary: {
-          color: colorPalette.tecoGreen,
+          color: colorPalette.tecoGrey900,
           fontSize: '37px',
           fontWeight:'bold'
         },
         stripeTextSecondary: {
-          color: colorPalette.tecoLightBlue,
+          color: colorPalette.tecoGreen,
           fontSize: '20px',
           fontWeight:'bold'
         },

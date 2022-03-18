@@ -51,11 +51,11 @@ export const EditUser = () => {
       <Stack>
         <FormControl isRequired>
           <FormLabel htmlFor='passwordCurrent'>Contraseña actual</FormLabel>
-          <Input value={passwordCurrent}  name='passwordCurrent' id='passwordCurrent' type='password' onChange={(e) => handleOnChange(e)}/>
+          <Input variant="logImput" value={passwordCurrent}  name='passwordCurrent' id='passwordCurrent' type='password' onChange={(e) => handleOnChange(e)}/>
         </FormControl>
         <FormControl isRequired>
           <FormLabel htmlFor='passwordNew'>Contraseña nueva</FormLabel>
-          <Input value={passwordNew}  name='passwordNew' id='passwordNew' type='password' onChange={(e) => handleOnChange(e)}/>
+          <Input variant="logImput" value={passwordNew}  name='passwordNew' id='passwordNew' type='password' onChange={(e) => handleOnChange(e)}/>
         </FormControl>
         {isLoading ?
           <Spinner
@@ -71,12 +71,12 @@ export const EditUser = () => {
         justifyContent='space-around'
         direction='row'
         >
-          <Button>
+          <Button variant="btnMain">
             <Link to='/home'>
               Volver
             </Link>
           </Button>
-          <Button onClick={handleOnSubmit}>Aplicar</Button>
+          <Button variant="btnMain" onClick={handleOnSubmit}>Aplicar</Button>
         </Stack>
         }
       </Stack>
