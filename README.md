@@ -52,17 +52,25 @@ To run this app:
 
 <img src='https://github.com/hackersTech9/frontend/blob/main/src/Assets/login-lite.png' alt='portada'/>
 
+This is the login page, here you can put your email and password to login or if you don't have an account you can register to enter the main page
+
 ### Main page
 
 <img src='https://github.com/hackersTech9/frontend/blob/main/src/Assets/lite-main.png' alt='portada'/>
+
+Then you will see the main page where you can see your favourite channels, series, movies and music.
 
 ### User preferences
 
 <img src='https://github.com/hackersTech9/frontend/blob/main/src/Assets/lite-preferen.png' alt='portada'/>
 
+In this section you can modify your password, change the view mode light/dark and close your session
+
 ### Video playback
 
 <img src='https://github.com/hackersTech9/frontend/blob/main/src/Assets/lite-play.png' alt='portada'/>
+
+In this section yuo can see the selected option
 
 ## Collaborators
 
