@@ -4,4 +4,9 @@ export const HELPER_FUNCTIONS = {
     const bearer = `Bearer ${token}`;
     return bearer;
   },
+  getUserPreference: (section) => {
+    const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+    const { preference } = userInfo;
+    return preference[section];
+  }
 }

@@ -10,6 +10,7 @@ const BASE = (() => {
 })();
 
 let Global = {
+  base: `${BASE}/`,
   login: `${BASE}/login/`,
   signup: `${BASE}/signup/`,
   changePassword: `${BASE}/users/password`,

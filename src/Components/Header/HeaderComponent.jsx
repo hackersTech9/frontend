@@ -26,7 +26,7 @@ export const Header = () => {
   useEffect(() => {
     const userInMemory = JSON.parse(localStorage.getItem('userInfo'));
     if(userInMemory) saveDataFromLogin(userInMemory)
-    else navigate('/');
+    else {navigate('/')};
      // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
 

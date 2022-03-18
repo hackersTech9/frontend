@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState, useLayoutEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { LoginContext } from 'Context/LoginContext';
 import {
   Container,
@@ -7,49 +7,20 @@ import {
 
 import { Stripe } from 'Components/Stripe/';
 
-function useWindowSize() {
-  const [size, setSize] = useState([0, 0]);
-  useLayoutEffect(() => {
-    function updateSize() {
-      setSize([window.innerWidth, window.innerHeight]);
-    }
-    window.addEventListener('resize', updateSize);
-    updateSize();
-    return () => window.removeEventListener('resize', updateSize);
-  },[]);
-  return size;
-}
-
 export const Home = () => {
 
   const Login = useContext(LoginContext);
   const { userInfo } = Login;
-  const [width] = useWindowSize();
   const [dataToRender, setDataToRender] = useState(null);
 
   useEffect(() => {
     if(userInfo) {
       const { preference } = userInfo;
       let processedData = processData(preference);
-      // if (width < 425) {
-      //   let mobileData = [];
-      //   processedData.forEach((preference)=> {
-      //     const { sectionTitle, billboard} = preference;
-      //     if(sectionTitle === 'live' || sectionTitle === 'music'){
-      //       mobileData = [...mobileData, preference]
-      //     } else {
-      //       const index = mobileData.findIndex(x => x.sectionTitle === "mobileContent");
-      //       if(index === -1) mobileData = [...mobileData, {sectionTitle: 'mobileContent', billboard}]
-      //       else mobileData[index].billboard = [...mobileData[index].billboard, ...billboard];
-      //     };
-      //   });
-      //   setDataToRender(mobileData);
-      // } else {
-      // }
       setDataToRender(processedData);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[width]);
+  },[userInfo]);
   
   const processData = (prefTest) => {
     const processedData = Object.keys(prefTest).map((key) => {return({sectionTitle: key, billboard: prefTest[key]})});

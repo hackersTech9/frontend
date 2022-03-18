@@ -11,6 +11,10 @@ const LoginContextProvider = ({ children }) => {
     if(token) localStorage.setItem('tokenFlow', JSON.stringify(token));
   }
 
+  const updateUserInfo = (info) => {
+    setUserInfo(info);
+  }
+
   const logout = () => {
     localStorage.removeItem('userInfo');
     setUserInfo(null);
@@ -30,7 +34,7 @@ const LoginContextProvider = ({ children }) => {
 
 
   return(
-    <LoginContext.Provider value={{ userInfo, logout, saveDataFromLogin }}>
+    <LoginContext.Provider value={{ userInfo, logout, saveDataFromLogin, updateUserInfo }}>
       {children}
     </LoginContext.Provider>
   )
