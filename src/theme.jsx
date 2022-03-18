@@ -1,5 +1,8 @@
 import { extendTheme } from "@chakra-ui/react";
 
+import '@fontsource/roboto/700.css';
+import '@fontsource/open-sans/700.css';
+
 const colorPalette = {
   tecoGreen: '#21D2A3',
   tecoBlue: '#3C04A4',
@@ -16,6 +19,10 @@ export default extendTheme({
         color: colorPalette.tecoGreen
       }
     }
+  },
+  fonts: {
+    heading: 'Open Sans, sans-serif',
+    body: 'Roboto, sans-serif',
   },
   colors: colorPalette,
   components: {
