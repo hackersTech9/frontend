@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 
 import { useLocation, useNavigate } from "react-router-dom/";
 
-import { Container, Stack, Button, Text } from '@chakra-ui/react';
+import { Container, Stack, Button, Text, Image } from '@chakra-ui/react';
+
+import { BsFillShareFill } from 'react-icons/bs'
+
 export const Reproducer = () => {
   
   const navigate = useNavigate();
@@ -42,7 +45,16 @@ export const Reproducer = () => {
           />
         </> 
         }
-        <Button onClick={handleNav} variant='btnMain'>Volver</Button>
+        <Stack direction='row' spacing={4}>
+          <Button width="100%" onClick={handleNav} variant='btnMain'>Volver</Button>
+          <Button 
+              variant='btnMain'
+              leftIcon={
+                <BsFillShareFill/>
+              }
+              >
+          </Button>
+        </Stack>
       </Stack>
     </Container>  
   )
