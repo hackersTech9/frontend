@@ -50,7 +50,7 @@ export default function SignUp({ checkInputs, changeFormMode, handleOnChange, da
           password
         };
         const response = await axios.post(Global.signup, dataForSignUp);
-        saveDataFromLogin(response.data)
+        saveDataFromLogin(response.data.data, response.data.token)
         setIsLoading(false);
         navigate('/home');
         changeFormMode();
