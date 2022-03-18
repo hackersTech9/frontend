@@ -22,8 +22,9 @@ export const Reproducer = () => {
   },[])
 
   return(
-    <Container mt='70px' maxW='container.xl' border='1px solid red'>
+    <Container mt='70px' maxW='container.xl'>
       <Stack
+      spacing='8'
       >
         {content &&
         <>
@@ -37,7 +38,7 @@ export const Reproducer = () => {
           />
         </> 
         }
-        <Button>Volver</Button>
+        <Button variant='btnMain'>Volver</Button>
       </Stack>
     </Container>  
   )
