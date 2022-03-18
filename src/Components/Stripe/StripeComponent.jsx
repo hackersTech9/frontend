@@ -92,7 +92,6 @@ export const Stripe = ({ sectionTitle, billboard }) => {
               h={[300, 300]}
               m={2}
               transition='all 0.3s ease-in-out'
-              cursor='pointer'
               _hover={{transform: 'scale(1.05)', transition: 'all 0.2s ease-in-out'}}
               bgGradient={`url(${v.thumbnail})`}
               backgroundRepeat='no-repeat'

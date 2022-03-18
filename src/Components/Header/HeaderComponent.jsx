@@ -14,7 +14,7 @@ import {
   Button,
   Image
 } from '@chakra-ui/react';
-import img from 'Assets/flow.jpg'
+import img from 'Assets/flow.lite.png'
 
 export const Header = () => {
   const navigate = useNavigate();
@@ -48,8 +48,9 @@ export const Header = () => {
       m={'0 auto'}
       w={'95%'}
       >
-               <Image 
+        <Image 
         onClick={handleHome}
+        h='50px'
         src={img}
         alt='flow'
         />

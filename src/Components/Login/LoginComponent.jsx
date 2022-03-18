@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import {
   Center,
-  Container
+  Container,
+  Image
 } from '@chakra-ui/react';
 
 import SignUp from './SignUpComponent';
 import SignIn from './SignInComponent';
+
+import img from 'Assets/flow.lite.png';
 
 export const Login = () => {
 
@@ -53,7 +56,14 @@ export const Login = () => {
   h='100vh'
   >
     <Container
+    centerContent
     >
+        <Image 
+        h='100px'
+        src={img}
+        alt='flow'
+        mb='40px'
+        />
       {isRegistering ?
       <SignUp hasError={hasError} dataToSend={dataToSend} {...loginFunctions}/>
       :
