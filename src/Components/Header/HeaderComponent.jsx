@@ -33,6 +33,9 @@ export const Header = () => {
     logout();
     navigate('/');
   }
+  const handleHome = () =>{
+    navigate("/home")
+  }
 
   return(
     <header>
@@ -43,7 +46,8 @@ export const Header = () => {
       justifyContent={'space-between'}
       p={'5px 10px'}
       >
-               <Image
+               <Image 
+        onClick={handleHome}
         src={img}
         alt='flow'
         />

@@ -1,5 +1,8 @@
 import { extendTheme } from "@chakra-ui/react";
 
+import '@fontsource/roboto/700.css';
+import '@fontsource/open-sans/700.css';
+
 const colorPalette = {
   tecoGreen: '#21D2A3',
   tecoBlue: '#3C04A4',
@@ -19,6 +22,10 @@ export default extendTheme({
       }
     }
   },
+  fonts: {
+    heading: 'Open Sans, sans-serif',
+    body: 'Roboto, sans-serif',
+  },
   colors: colorPalette,
   components: {
     Button: {
@@ -30,6 +37,26 @@ export default extendTheme({
         },
         fondo: {
           bg: 'tecoGrey900'
+        }
+      }
+    },
+    Text:{
+      variants: {
+        stripeTextPrimary: {
+          color: colorPalette.tecoGreen,
+          fontSize: '37px',
+          fontWeight:'bold'
+        },
+        stripeTextSecondary: {
+          color: colorPalette.tecoLightBlue,
+          fontSize: '20px',
+          fontWeight:'bold'
+        },
+        stripeTextTerciary: {
+          color: colorPalette.tecoBlack,
+          fontSize: '14px',
+          fontWeight:'bold',
+          bg:'tecoGreen'
         }
       }
     }

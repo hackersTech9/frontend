@@ -1,4 +1,4 @@
-import { Stack, Image, Text } from '@chakra-ui/react'
+import { Stack, Text, Box } from '@chakra-ui/react'
 import { useNavigate } from '../../../node_modules/react-router-dom/index'
 
 
@@ -9,7 +9,7 @@ export const Stripe = ({sectionTitle, billboard }) => {
   const navigate = useNavigate();
 
   const handleOnClick = (contentSrc, contentTitle) => {
-    navigate('/play', { state: {contentSrc, contentTitle  }});
+    navigate('/play', { state: {contentSrc, contentTitle}});
     
   }
   
@@ -17,34 +17,34 @@ export const Stripe = ({sectionTitle, billboard }) => {
     switch (key) {
       case "live":
         return(
-          <Stack direction="row">
-        <Text>contenido en</Text>
-          <Text>VIVO</Text>
+          <Stack direction="row" align='baseline'>
+            <Text variant='stripeTextPrimary'>TV</Text>
+            <Text variant='stripeTextSecondary'>en VIVO</Text>
           </Stack>
         )
       case "movies":
         return(
-          <Stack direction="row">
-        <Text>películas</Text>
-          <Text>ON DEMAND</Text>
+          <Stack direction="row" align='baseline'>
+            <Text variant='stripeTextPrimary'>Películas</Text>
+            <Text variant='stripeTextSecondary'>ON DEMAND</Text>
           </Stack>
         )  
       case "series":
         return(
-          <Stack direction="row">
-        <Text>series</Text>
-          <Text>ON DEMAND</Text>
+          <Stack direction="row" align='baseline'>
+            <Text variant='stripeTextPrimary'>Series</Text>
+            <Text variant='stripeTextSecondary'>ON DEMAND</Text>
           </Stack>
         )
       case "music":
         return(
-        <Text>música</Text>
+        <Text variant='stripeTextPrimary'>Música</Text>
         )
         case "mobileContent":
         return(
-          <Stack direction="row">
-        <Text>contenido</Text>
-          <Text>ON DEMAND</Text>
+          <Stack direction="row" align='baseline'>
+            <Text>contenido</Text>
+            <Text>ON DEMAND</Text>
           </Stack>
         )
       default:
@@ -54,35 +54,38 @@ export const Stripe = ({sectionTitle, billboard }) => {
     }
   }
 
-
-
   return(
     <>
-    <div p={6}>{generateTitle(sectionTitle)}</div>
-    <Stack  direction= "row" p={10}>
-      {billboard.map((v, i) => {
-        
-        return(
-          <div  key={i} >
-          <Text >
-          {v.name}
-          </Text>
-          <div onClick={() => {
-            handleOnClick(v.url, v.name)
-          }}>
-          <Image 
-              boxSize='100%'  
-              objectFit='cover'
-          src={v.thumbnail ? v.thumbnail : "" }
-          alt={v.name}
-          />
-          </div>
-          </div>
-        )
-      })
-    }
-
-    </Stack>
+      {generateTitle(sectionTitle)}
+      <Stack  direction= "row">
+        {billboard.map((v, i) => {  
+          return(
+            <Box key={i}
+            w='auto'
+            h='auto'
+            >
+              <Stack
+              justifyContent='end'
+              w='140px'
+              h='140px'
+              onClick={() => { handleOnClick(v.url, v.name) }}
+              bgGradient={`url(${v.thumbnail})`}
+              backgroundRepeat='no-repeat'
+              backgroundPosition='center'
+              backgroundSize='contain'
+              >
+                <Text
+                variant='stripeTextTerciary'
+                pl='5px'
+                >
+                  {v.name}
+                </Text>
+              </Stack>
+            </Box>
+          )
+        })
+        }
+      </Stack>
     </>
   )
 } 
