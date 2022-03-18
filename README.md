@@ -50,11 +50,7 @@ To run this app:
 
 ### Login
 
-<img src='https://github.com/hackersTech9/frontend/blob/main/src/Assets/login-lite  .png' alt='portada'/>
-
-### Change password
-
-<img src='https://github.com/hackersTech9/frontend/blob/main/src/Assets/flow.lite.png' alt='portada'/>
+<img src='https://github.com/hackersTech9/frontend/blob/main/src/Assets/login-lite.png' alt='portada'/>
 
 ### Main page
 
