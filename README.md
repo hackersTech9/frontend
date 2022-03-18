@@ -4,7 +4,7 @@
 _It is a flow project but lighter and faster.
 Your top three favorite channels, series, movies and radio just a click away._
 
-<img src='https://github.com/...' alt='portada'/>
+<img src='https://github.com/hackersTech9/frontend/blob/main/src/Assets/flow.lite.png' alt='portada'/>
 
 ## Challenge
 
