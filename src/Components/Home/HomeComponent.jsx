@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState, useLayoutEffect } from 'react';
 import { LoginContext } from 'Context/LoginContext';
 import {
-  Center,
   Container,
   Stack
 } from '@chakra-ui/react';
@@ -49,7 +48,8 @@ export const Home = () => {
         setDataToRender(processedData);
       }
     }
-  },[width, userInfo]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[width]);
   
   const processData = (prefTest) => {
     const processedData = Object.keys(prefTest).map((key) => {return({sectionTitle: key, billboard: prefTest[key]})});
