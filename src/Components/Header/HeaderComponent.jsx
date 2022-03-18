@@ -12,8 +12,11 @@ import {
   Stack,
   Avatar,
   Button,
-  Image
+  Image,
+  Text
 } from '@chakra-ui/react';
+import { FaMoon, FaSun } from "react-icons/fa";
+
 import img from 'Assets/flow.lite.png'
 
 export const Header = () => {
@@ -21,7 +24,7 @@ export const Header = () => {
   const Login = useContext(LoginContext);
   const { userInfo, saveDataFromLogin, logout } = Login;
   const Theme = useContext(ThemeContext);
-  const { changeTheme } = Theme;
+  const { changeTheme, defaultTheme } = Theme;
 
   useEffect(() => {
     const userInMemory = JSON.parse(localStorage.getItem('userInfo'));
@@ -65,14 +68,24 @@ export const Header = () => {
           w='250px' h='200px'
           >
             <PopoverArrow bg='tecoGreen'/>
-            <PopoverHeader textAlign={['center']} m={'3'} borderColor='tecoGrey900'>{`${userInfo?.lastname.toUpperCase()} ${userInfo?.firstname}`}</PopoverHeader>
+            <PopoverHeader textAlign={['center']} m={'3'} borderColor='tecoGrey900'>
+              <Stack direction='row' align='center' justifyContent='space-between'>
+                <Text>
+                  {`${userInfo?.lastname.toUpperCase()} ${userInfo?.firstname}`}
+                </Text>
+                <Button
+                w='10px'
+                p='0'
+                borderRadius='100%'
+                onClick={changeTheme}
+                variant='btnMain'
+                >
+                  { defaultTheme ? <FaMoon /> : <FaSun />}
+                </Button>
+              </Stack>
+            </PopoverHeader>
             <PopoverBody>
               <Stack m={'1'}>
-                  <Button
-                  onClick={changeTheme}
-                  >
-                    Luna / Sol
-                  </Button>
                   <Button bg='tecoGreen' mb={'2'} color='tecoGrey900'>
                     <Link to='/edituser'>
                         Editar usuario
