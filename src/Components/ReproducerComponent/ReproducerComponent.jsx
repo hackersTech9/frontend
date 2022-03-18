@@ -1,16 +1,10 @@
 import React, { useEffect, useState } from "react";
-
+import { SocialMedia } from "Components/SocialMedia/index";
 import { useLocation, useNavigate } from "react-router-dom/";
 
-import { Container, Stack, Button, Text,   Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalBody,
-  HStack
- } from '@chakra-ui/react';
+import { Container, Stack, Button, Text } from '@chakra-ui/react';
 
 import { BsFillShareFill } from 'react-icons/bs'
-import { FaFacebook, FaTwitter, FaWhatsapp } from 'react-icons/fa'
 
 
 
@@ -39,9 +33,11 @@ export const Reproducer = () => {
     navigate("/home");
   }
 
-  const encenderModal = () => {
-    setIsOpen(true)
+  const encenderModal = (e) => {
+    e.preventDefault()
+    setIsOpen(!isOpen)
   }
+
   const cerrarModal = () => {
     setIsOpen(false)
   }
@@ -77,7 +73,14 @@ export const Reproducer = () => {
           </Button>
         </Stack>
       </Stack>
-      <Modal isOpen={isOpen} onClose={cerrarModal} isCentered>
+
+      <SocialMedia
+        isOpen={isOpen}
+        onClose={cerrarModal}
+      >
+        
+      </SocialMedia>
+      {/* <Modal isOpen={isOpen} onClose={cerrarModal} isCentered>
         <ModalOverlay />
         <ModalContent 
           border="20px"
@@ -88,6 +91,7 @@ export const Reproducer = () => {
                 colorScheme='facebook' 
                 leftIcon={<FaFacebook />}
                 size="lg"
+                onClick={ enviarAlerta}
                 >
                 Facebook
               </Button>
@@ -96,6 +100,7 @@ export const Reproducer = () => {
                 colorScheme='twitter' 
                 leftIcon={<FaTwitter />}
                 size="lg"
+                onClick={ enviarAlerta}
                 >
                 Twitter
               </Button>
@@ -104,6 +109,7 @@ export const Reproducer = () => {
                 colorScheme='whatsapp' 
                 leftIcon={<FaWhatsapp />}
                 size="lg"
+                onClick={ enviarAlerta}
                 >
               whatsapp
               </Button>
@@ -111,7 +117,7 @@ export const Reproducer = () => {
             </HStack>
           </ModalBody>
         </ModalContent>
-      </Modal>
+      </Modal> */}
     </Container>  
   )
 };
