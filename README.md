@@ -1,59 +1,74 @@
-# Hackathon de la TeachStation - Grupo 9
+# Hackathon of TechStation - Group 9
+# Flow Lite
 
-## Integrantes
+_It is a flow project but lighter and faster.
+Your top three favorite channels, series, movies and radio just a click away._
 
-- [Gouvert, Rodolfo Ernesto](https://github.com/gouvertrodolfo)
-- [Sosa, Javier Ricardo](https://github.com/Janegro09)
-- [Mereles, Christian Ariel](https://github.com/chrismer)
-- [Blanco, Lisandro](https://github.com/liisandrob)
-- [Ojeda Pytel, Ailin](https://github.com/AilinI)
-- [Miquel, Diego Fernando](https://github.com/dfmiquel/)
-- [Nancy Barea](https://github.com/nancybarea/)
+<img src='https://github.com/...' alt='portada'/>
 
-## Desafio
+## Challenge
 
-To be announced...
+This challenge consists on creating a minimal version of the Flow app.
 
-## ¿Qué se utilizó?
+## How we solved it
+
+Creating this project was a multi-step process. We:
+
+- Staged a brainstorming session
+- Determined our strengths and weaknesses
+- Got separated into two groups: back and front end
+- Coordinated both groups to push the project forward
+
+
+## What was used?
 
 - [React.js](https://es.reactjs.org/)
 - [react-router-dom](https://v5.reactrouter.com/web/guides/quick-start)
 - [Chakra UI](https://chakra-ui.com/docs/getting-started)
 - [Axios](https://axios-http.com/docs/intro)
+- [MongoDB](https://www.mongodb.com/)
+- [Postman](https://www.postman.com/)
 
-## Scripts disponibles
+## Let's start 🚀
 
-En este proyecto, se puede utilizar:
-
-### `npm start`
-
-Corre la app en modo desarrollo.\
-Abre [http://localhost:3000](http://localhost:3000) para verlo en el navegador.
-
-La página se actualiza cuando se aplican cambios.
-
-## Pasos para clonar repositorio
-
-Abrir terminal e ingresar
+To clone this repository:
 
 ```
-$ cd <directorio donde se quiere clonar>
+$ cd <folder to clone>
 
 $ git clone https://github.com/hackersTech9/frontend.git .
 
-$ npm i
-
-$ npm start
 ```
 
-## Archivos requeridos
+To set up dependencies:
+### `npm install`
 
-No se requiere la creación de archivos adicionales para el correcto funcionamiento de la aplicación
+To run this app:
+### `npm start`
 
-## Archivos opcionales
+## Application specifications
 
-La aplicación por defecto utiliza la API de development, si se desea utilizar en ambiente local o productivo, crear un archivo .env en la raiz del repositorio con la siguiente variable de entorno:
+### Login
 
-```
-REACT_APP_ENV=< local | development | production >
-```
+### Change password
+
+### Main page
+
+### User preferences
+
+### Video playback
+
+
+
+## Collaborators
+
+### Frontend
+- [Blanco, Lisandro](https://github.com/liisandrob)
+- [Ojeda Pytel, Ailin](https://github.com/AilinI)
+- [Miquel, Diego Fernando](https://github.com/dfmiquel/)
+
+### Backend
+- [Gouvert, Rodolfo Ernesto](https://github.com/gouvertrodolfo)
+- [Sosa, Javier Ricardo](https://github.com/Janegro09)
+- [Mereles, Christian Ariel](https://github.com/chrismer)
+- [Nancy Barea](https://github.com/nancybarea/)
