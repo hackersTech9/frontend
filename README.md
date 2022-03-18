@@ -97,4 +97,12 @@ And doing clik on the share bottom you can share what you are watching...
 - [Gouvert, Rodolfo Ernesto](https://github.com/gouvertrodolfo)
 - [Sosa, Javier Ricardo](https://github.com/Janegro09)
 - [Mereles, Christian Ariel](https://github.com/chrismer)
-- [Nancy Barea](https://github.com/nancybarea/)
+- [Barea Nancy](https://github.com/nancybarea/)
+
+### Mentors
+- [Garay JUAN]
+- [Cuarterolo Franco]
+
+### Tutors
+-[Torres Jose]
+-[Giupponi, Alfredo]
