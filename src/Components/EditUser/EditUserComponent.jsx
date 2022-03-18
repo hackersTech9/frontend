@@ -36,8 +36,8 @@ export const EditUser = () => {
     setIsLoading(true);
     try {
       await axios.put(Global.changePassword, dataToSend, config);
-      navigate('/home');
       setIsLoading(false);
+      navigate('/home');
     } catch (error) {
       console.log(error);
       setIsLoading(false);
