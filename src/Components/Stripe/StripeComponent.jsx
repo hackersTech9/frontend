@@ -9,7 +9,7 @@ export const Stripe = ({sectionTitle, billboard }) => {
   const navigate = useNavigate();
 
   const handleOnClick = (contentSrc, contentTitle) => {
-    navigate('/play', { state: {contentSrc, contentTitle  }});
+    navigate('/play', { state: {contentSrc, contentTitle}});
     
   }
   
@@ -73,6 +73,7 @@ export const Stripe = ({sectionTitle, billboard }) => {
           <Image 
               boxSize='100%'  
               objectFit='cover'
+              maxH='300px'
           src={v.thumbnail ? v.thumbnail : "" }
           alt={v.name}
           />

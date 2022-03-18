@@ -21,6 +21,10 @@ export const Reproducer = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
+  const handleNav = () => {
+    navigate("/home");
+  }
+
   return(
     <Container mt='70px' maxW='container.xl'>
       <Stack
@@ -38,7 +42,7 @@ export const Reproducer = () => {
           />
         </> 
         }
-        <Button variant='btnMain'>Volver</Button>
+        <Button onClick={handleNav} variant='btnMain'>Volver</Button>
       </Stack>
     </Container>  
   )
