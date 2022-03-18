@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/hackersTech9/frontend.git/static/css/main.c4dcf82c.css",
+    "main.js": "/hackersTech9/frontend.git/static/js/main.fd894ba8.js",
+    "static/media/404.png": "/hackersTech9/frontend.git/static/media/404.eaf250c1fa33ff9802d5.png",
+    "static/media/flow.lite.png": "/hackersTech9/frontend.git/static/media/flow.lite.f7dd5bfdb7a4cf78d6ef.png",
+    "static/media/open-sans-all-700-normal.woff": "/hackersTech9/frontend.git/static/media/open-sans-all-700-normal.3499b9716301bd3c513c.woff",
+    "static/media/roboto-all-700-normal.woff": "/hackersTech9/frontend.git/static/media/roboto-all-700-normal.ef6d1d09b20b877fee4e.woff",
+    "static/media/open-sans-cyrillic-ext-700-normal.woff2": "/hackersTech9/frontend.git/static/media/open-sans-cyrillic-ext-700-normal.3c59ade8b77934a45b30.woff2",
+    "static/media/open-sans-latin-700-normal.woff2": "/hackersTech9/frontend.git/static/media/open-sans-latin-700-normal.166dc5efb248e5752096.woff2",
+    "static/media/roboto-latin-700-normal.woff2": "/hackersTech9/frontend.git/static/media/roboto-latin-700-normal.0682ca7f74351d42bf73.woff2",
+    "static/media/roboto-cyrillic-ext-700-normal.woff2": "/hackersTech9/frontend.git/static/media/roboto-cyrillic-ext-700-normal.b816cda3107bb21c87e1.woff2",
+    "static/media/open-sans-latin-ext-700-normal.woff2": "/hackersTech9/frontend.git/static/media/open-sans-latin-ext-700-normal.45e8e1ac313ddc44a973.woff2",
+    "static/media/roboto-latin-ext-700-normal.woff2": "/hackersTech9/frontend.git/static/media/roboto-latin-ext-700-normal.bcf37d666ce10b3556cd.woff2",
+    "static/media/open-sans-cyrillic-700-normal.woff2": "/hackersTech9/frontend.git/static/media/open-sans-cyrillic-700-normal.1c275ed85d097d423a5a.woff2",
+    "static/media/roboto-cyrillic-700-normal.woff2": "/hackersTech9/frontend.git/static/media/roboto-cyrillic-700-normal.0334efc0de1012200889.woff2",
+    "static/media/open-sans-greek-700-normal.woff2": "/hackersTech9/frontend.git/static/media/open-sans-greek-700-normal.8fe2fcd1cc0060a5abe8.woff2",
+    "static/media/open-sans-hebrew-700-normal.woff2": "/hackersTech9/frontend.git/static/media/open-sans-hebrew-700-normal.5b6a72dd649c1ba5dd57.woff2",
+    "static/media/open-sans-vietnamese-700-normal.woff2": "/hackersTech9/frontend.git/static/media/open-sans-vietnamese-700-normal.f7029b9ddd8d28129255.woff2",
+    "static/media/roboto-greek-700-normal.woff2": "/hackersTech9/frontend.git/static/media/roboto-greek-700-normal.3292e831b18d0c23d609.woff2",
+    "static/media/roboto-vietnamese-700-normal.woff2": "/hackersTech9/frontend.git/static/media/roboto-vietnamese-700-normal.3096f18acebc3f07020d.woff2",
+    "static/media/open-sans-greek-ext-700-normal.woff2": "/hackersTech9/frontend.git/static/media/open-sans-greek-ext-700-normal.6ec764fe61947b88ec49.woff2",
+    "static/media/roboto-greek-ext-700-normal.woff2": "/hackersTech9/frontend.git/static/media/roboto-greek-ext-700-normal.9674bc0ae12c2551d9d1.woff2",
+    "index.html": "/hackersTech9/frontend.git/index.html",
+    "main.c4dcf82c.css.map": "/hackersTech9/frontend.git/static/css/main.c4dcf82c.css.map",
+    "main.fd894ba8.js.map": "/hackersTech9/frontend.git/static/js/main.fd894ba8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c4dcf82c.css",
+    "static/js/main.fd894ba8.js"
+  ]
+}
