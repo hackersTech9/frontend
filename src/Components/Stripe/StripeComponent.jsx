@@ -9,7 +9,7 @@ export const Stripe = ({sectionTitle, billboard }) => {
   const navigate = useNavigate();
 
   const handleOnClick = (contentSrc, contentTitle) => {
-    navigate('/play', { state: {contentSrc, contentTitle  }});
+    navigate('/play', { state: {contentSrc, contentTitle}});
     
   }
   
