@@ -3,18 +3,61 @@ import { useNavigate } from '../../../node_modules/react-router-dom/index'
 
 
 
+
 export const Stripe = ({sectionTitle, billboard }) => {
 
-  console.log(billboard)
   const navigate = useNavigate();
 
   const handleOnClick = (url) => {
     navigate('/play', { state: {contentSrc: url}});
   }
   
+  const generateTitle = (key) => {
+    switch (key) {
+      case "live":
+        return(
+          <Stack direction="row">
+        <Text>contenido en</Text>
+          <Text>VIVO</Text>
+          </Stack>
+        )
+      case "movies":
+        return(
+          <Stack direction="row">
+        <Text>películas</Text>
+          <Text>ON DEMAND</Text>
+          </Stack>
+        )  
+      case "series":
+        return(
+          <Stack direction="row">
+        <Text>series</Text>
+          <Text>ON DEMAND</Text>
+          </Stack>
+        )
+      case "music":
+        return(
+        <Text>música</Text>
+        )
+        case "mobileContent":
+        return(
+          <Stack direction="row">
+        <Text>contenido</Text>
+          <Text>ON DEMAND</Text>
+          </Stack>
+        )
+      default:
+        return(
+          "Algo salió mal"
+        )
+    }
+  }
+
+
+
   return(
     <>
-    <div p={6}>{sectionTitle}</div>
+    <div p={6}>{generateTitle(sectionTitle)}</div>
     <Stack  direction= "row" p={10}>
       {billboard.map((v, i) => {
         
