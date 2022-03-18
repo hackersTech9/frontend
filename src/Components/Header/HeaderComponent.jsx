@@ -49,24 +49,24 @@ export const Header = () => {
         />
         <Popover>
           <PopoverTrigger>
-            <Avatar
+            <Avatar _hover={{cursor:'pointer'}}
             name={`${userInfo?.firstname} ${userInfo?.lastname}`}
             src={userInfo?.avatar}
             />
           </PopoverTrigger>
-          <PopoverContent
-          w='150px'
+          <PopoverContent bg='tecoGrey900' border='none'
+          w='250px' h='200px'
           >
-            <PopoverArrow />
-            <PopoverHeader>{`${userInfo?.lastname.toUpperCase()} ${userInfo?.firstname}`}</PopoverHeader>
+            <PopoverArrow bg='tecoGreen'/>
+            <PopoverHeader textAlign={['center']} m={'3'} borderColor='tecoGrey900'>{`${userInfo?.lastname.toUpperCase()} ${userInfo?.firstname}`}</PopoverHeader>
             <PopoverBody>
-              <Stack>
-                  <Button>
+              <Stack m={'1'}>
+                  <Button bg='tecoGreen' mb={'2'} color='tecoGrey900'>
                     <Link to='/edituser'>
                         Editar usuario
                     </Link>
                   </Button>
-                <Button 
+                <Button bg='tecoGreen' color='tecoGrey900'
                 onClick={handleLogout}
                 >
                   Cerrar sesión

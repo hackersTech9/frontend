@@ -5,7 +5,9 @@ const colorPalette = {
   tecoBlue: '#3C04A4',
   tecoLightBlue: '#00AEE6',
   tecoGrey: '#C9D2E2',
-  tecoBlack: 'black'
+  tecoBlack: 'black',
+  tecoGrey900: '#171923',
+  tecoGrey300: '#CBD5E0'
 }
 
 export default extendTheme({
@@ -23,7 +25,11 @@ export default extendTheme({
       variants: {
         btnMain: {
           color: colorPalette.tecoBlack,
-          bg: colorPalette.tecoGreen
+          bg: colorPalette.tecoGreen,
+          cursor: 'pointer'
+        },
+        fondo: {
+          bg: 'tecoGrey900'
         }
       }
     }
