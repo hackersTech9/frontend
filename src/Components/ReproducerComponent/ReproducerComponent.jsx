@@ -80,7 +80,7 @@ export const Reproducer = () => {
       <Modal isOpen={isOpen} onClose={cerrarModal} isCentered>
         <ModalOverlay />
         <ModalContent 
-          // border="20px"
+          border="20px"
         >
           <ModalBody>
             <HStack>
