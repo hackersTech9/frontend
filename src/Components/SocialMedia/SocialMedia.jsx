@@ -22,7 +22,6 @@ export const SocialMedia = (props) => {
     e.preventDefault()
     alert("Enviando contenido a tus amigos")
   }
-  console.log(props)
   return(
 
     <Modal isOpen={props.isOpen} onClose={props.onClose} isCentered>
