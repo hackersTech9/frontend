@@ -74,6 +74,7 @@ export default function SignUp({ checkInputs, changeFormMode, handleOnChange, da
           <Image
           alt='defaultAvatar'
           src={avatar}
+          w='100px'
           borderRadius='full'
           />
         </Stack>
