@@ -8,8 +8,9 @@ export const Stripe = ({sectionTitle, billboard }) => {
 
   const navigate = useNavigate();
 
-  const handleOnClick = (url) => {
-    navigate('/play', { state: {contentSrc: url}});
+  const handleOnClick = (contentSrc, contentTitle) => {
+    navigate('/play', { state: {contentSrc, contentTitle  }});
+    
   }
   
   const generateTitle = (key) => {
@@ -67,7 +68,7 @@ export const Stripe = ({sectionTitle, billboard }) => {
           {v.name}
           </Text>
           <div onClick={() => {
-            handleOnClick(v.url)
+            handleOnClick(v.url, v.name)
           }}>
           <Image 
               boxSize='100%'  
