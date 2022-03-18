@@ -60,9 +60,6 @@ export const Home = () => {
     <Container
     maxW='container.xxl'
     >
-      <Center>
-        <h2>Qué vas a ver {userInfo?.firstname}?</h2>
-      </Center>
       <Stack
       >
         {dataToRender ?

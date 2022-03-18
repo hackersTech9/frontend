@@ -26,6 +26,26 @@ export default extendTheme({
           bg: colorPalette.tecoGreen
         }
       }
+    },
+    Text:{
+      variants: {
+        stripeTextPrimary: {
+          color: colorPalette.tecoGreen,
+          fontSize: '37px',
+          fontWeight:'bold'
+        },
+        stripeTextSecondary: {
+          color: colorPalette.tecoLightBlue,
+          fontSize: '20px',
+          fontWeight:'bold'
+        },
+        stripeTextTerciary: {
+          color: colorPalette.tecoBlack,
+          fontSize: '14px',
+          fontWeight:'bold',
+          bg:'tecoGreen'
+        }
+      }
     }
   }
 });
